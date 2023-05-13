@@ -1,0 +1,24 @@
+{
+    "name": "pizzaria/labolonhesa",
+    "description": "Trabalho da Faculdade - Pizzaria La Bolonhesa",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Montolive",
+            "email": "pedromontolive@gmail.com"
+        },
+        {
+            "name": "Vinicius Cortez",
+            "email": "cortez_vinicius@hotmail.com"
+        },
+        {
+            "name": "Isabela Lima",
+            "email": "isabela_na2012@live.com"
+        }
+    ],
+    "require": {}
+}
