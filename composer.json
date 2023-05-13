@@ -20,5 +20,7 @@
             "email": "isabela_na2012@live.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twbs/bootstrap": "^5.2"
+    }
 }
