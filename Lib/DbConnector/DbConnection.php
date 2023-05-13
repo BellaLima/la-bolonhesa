@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\DbConnector;
+namespace Lib\DbConnector;
 
 class DbConnection
 {

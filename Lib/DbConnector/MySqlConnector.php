@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Lib\DbConnector;
+namespace Lib\DbConnector;
 
-use App\Lib\DbConnetion\IConnector;
+use Lib\DbConnetion\IConnector;
 
 class MySqlConnector implements IConnector{
     /**

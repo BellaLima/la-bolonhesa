@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\DbConnetion;
+namespace Lib\DbConnetion;
 
 interface IConnector{
     /**

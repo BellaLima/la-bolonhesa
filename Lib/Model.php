@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Lib\DAO;
+namespace Lib;
 
-class DAO{
+class Model{
     /**
      * @TODO
      */
