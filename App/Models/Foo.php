@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Lib\Model;
+use Lib\Model;
 
 class Foo extends Model {
     /**
