@@ -14,6 +14,6 @@
         }
         ?>
     <title><?php echo TITLE; ?></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo 'http://'.APP_HOST.'/public/css/main.css'; ?>">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
