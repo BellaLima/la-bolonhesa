@@ -31,7 +31,6 @@
     ],
     "require": {
         "php": ">= 8.1",
-        "twbs/bootstrap": "^5.2",
         "vlucas/phpdotenv": "^5.5"
     }
 }
