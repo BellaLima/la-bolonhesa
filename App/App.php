@@ -24,7 +24,7 @@ class App
         define('DB_HOST'        , "localhost");
         define('DB_USER'        , "root");
         define('DB_PASSWORD'    , "password");
-        define('DB_NAME'        , "db_bolonhesa");
+        define('DB_NAME'        , "db_labolonhesa");
         define('DB_DRIVER'      , "mysql");
 
         $this->url();

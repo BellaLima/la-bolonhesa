@@ -4,31 +4,24 @@ namespace App\Lib;
 
 class Sessao
 {
-    public static function gravaMensagem($mensagem){
-        $_SESSION['mensagem'] = $mensagem;
+    function criarSessaoUsuario($user) {
+
+        $duracaoEmSegundos = 2 * 60;
+
+        session_set_cookie_params($duracaoEmSegundos);
+
+        session_start();
+
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['nome'] = $user['nome'];
+        $_SESSION['nivel'] = $user['nivel'];
+
+        exit();
     }
 
-    public static function limpaMensagem(){
-        unset($_SESSION['mensagem']);
-    }
+    function destruirSessao() {
+        session_start();
+        session_destroy(); 
+    }    
 
-    public static function retornaMensagem(){
-        return ($_SESSION['mensagem']) ? $_SESSION['mensagem'] : "";
-    }
-
-    public static function gravaFormulario($form){
-        $_SESSION['form'] = $form;
-    }
-
-    public static function limpaFormulario(){
-        unset($_SESSION['form']);
-    }
-
-    public static function retornaValorFormulario($key){
-        return (isset($_SESSION['form'][$key])) ? $_SESSION['form'][$key] : "";
-    }
-
-    public static function existeFormulario(){
-        return (isset($_SESSION['form'])) ? $_SESSION['form'] : "";
-    }
 }

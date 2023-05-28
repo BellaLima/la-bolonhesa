@@ -7,6 +7,6 @@
     <div class="h_btns cursor-pointer hover:text-gray-100">Home</div>
     <div class="h_btns cursor-pointer hover:text-gray-100">Pizzas</div>
     <div class="h_btns cursor-pointer hover:text-gray-100">Pedidos</div>
-    <div class="h_btns cursor-pointer hover:text-gray-100">Perfil</div>
+    <div class="h_btns cursor-pointer hover:text-gray-100"><a href="<?php echo 'http://'.APP_HOST.'/home/login'; ?>">Login</a></div>
   </div>
 </div>

@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-
+<script src="<?php echo 'http://'.APP_HOST.'/public/plugins/jquery/jquery-3.7.0.min.js'; ?>"></script>
 <?php 
     if(!empty($data['script'])){
         foreach ($data['script'] as $s): 
