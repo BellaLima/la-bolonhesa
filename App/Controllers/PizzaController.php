@@ -11,5 +11,12 @@ Class PizzaController extends Controller
         $data['script'] = [''];
         $this->render('/pizza/index', $data);
     }
+
+    public function pedido()
+    {
+        $data['style'] = [''];
+        $data['script'] = [''];
+        $this->render('/pizza/pedido', $data);
+    }
     
 }
