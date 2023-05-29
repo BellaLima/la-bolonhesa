@@ -23,7 +23,7 @@ class App
         define('TITLE'          , "La Bolonhesa");
         define('DB_HOST'        , "localhost");
         define('DB_USER'        , "root");
-        define('DB_PASSWORD'    , "password");
+        define('DB_PASSWORD'    , "");
         define('DB_NAME'        , "db_labolonhesa");
         define('DB_DRIVER'      , "mysql");
 

@@ -8,7 +8,7 @@
 				<div>
 					<h1 class="text-2xl font-semibold">Faça Login para se deliciar com as melhores pízzas</h1>
 				</div>
-        <form id="form-login" action="<?php echo 'http://'.APP_HOST.'/home/entrar'; ?>">
+        <form id="form-login" action="<?php echo 'http://'.APP_HOST.'/user/login'; ?>">
           <div class="divide-y divide-gray-200">
             <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
               <div class="relative">

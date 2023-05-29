@@ -16,7 +16,7 @@ class Sessao
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['nivel'] = $user['nivel'];
 
-        exit();
+        return true;
     }
 
     function destruirSessao() {
