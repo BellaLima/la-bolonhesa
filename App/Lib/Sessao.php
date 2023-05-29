@@ -5,7 +5,7 @@ namespace App\Lib;
 class Sessao
 {
     function criarSessaoUsuario($user) {
-
+        session_destroy(); 
         $duracaoEmSegundos = 2 * 60;
 
         session_set_cookie_params($duracaoEmSegundos);

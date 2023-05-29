@@ -4,8 +4,8 @@
     <div class="text ml-2 my-auto flex-none">Pizzaria La Bilonheza</div>
   </div>
   <div class="sub_head ml-auto flex space-x-8 my-auto">
-    <div class="h_btns cursor-pointer hover:text-gray-100">Home</div>
-    <div class="h_btns cursor-pointer hover:text-gray-100">Pizzas</div>
+    <div class="h_btns cursor-pointer hover:text-gray-100"><a href="<?php echo 'http://'.APP_HOST.'/'; ?>">Home</a></div>
+    <div class="h_btns cursor-pointer hover:text-gray-100"><a href="<?php echo 'http://'.APP_HOST.'/pizza/index'; ?>">Pizza</a></div>
     <div class="h_btns cursor-pointer hover:text-gray-100">Pedidos</div>
     <div class="h_btns cursor-pointer hover:text-gray-100"><a href="<?php echo 'http://'.APP_HOST.'/home/login'; ?>">Login</a></div>
   </div>
