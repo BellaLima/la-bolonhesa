@@ -1,0 +1,151 @@
+<section class="bg-white mt-10 md-10 dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3">
+            
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+
+			<div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        CALABRESA
+                    </a>
+                    
+                    <span class="text-sm text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
