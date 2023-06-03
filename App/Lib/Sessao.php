@@ -15,13 +15,15 @@ class Sessao
         $_SESSION['id'] = $user['id'];
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['nivel'] = $user['nivel'];
+        $_SESSION['loged'] = true;
 
         return true;
     }
 
     function destruirSessao() {
         session_start();
-        session_destroy(); 
+        session_destroy();
+        $_SESSION['loged'] = false; 
     }    
 
 }

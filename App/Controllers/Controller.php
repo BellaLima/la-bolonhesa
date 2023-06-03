@@ -20,10 +20,25 @@ abstract class Controller
         $Sessao  = Sessao::class;
         extract($data);
 
+        if(empty($_SESSION['loged'])){
+            $data['style'] = [''];
+            $data['script'] = ['login'];
+            
+            extract($data);
+
+            require_once PATH . '/App/Views/layouts/header.php';
+            require_once PATH . '/App/Views/layouts/navbar.php';
+            require_once PATH . '/App/Views/home/login.php';
+            require_once PATH . '/App/Views/layouts/footer.php';
+            exit;
+        }
+
+
         require_once PATH . '/App/Views/layouts/header.php';
         require_once PATH . '/App/Views/layouts/navbar.php';
         require_once PATH . '/App/Views/' . $view . '.php';
         require_once PATH . '/App/Views/layouts/footer.php';
+        exit;
     }
 
     public function redirect($view)
