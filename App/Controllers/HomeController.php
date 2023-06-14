@@ -7,24 +7,27 @@ Class HomeController extends Controller
 {
     public function index()
     {
-
-        $data['style'] = [''];
-        $data['script'] = [''];
-        $this->render('/home/index', $data);
+        if($_SESSION['nivel'] == 1){
+            $data['style'] = [''];
+            $data['script'] = [''];
+            $this->render('/adm/index', $data);
+        } else {
+            $data['style'] = [''];
+            $data['script'] = [''];
+            $this->render('/home/index', $data);
+        }
     }
 
     public function login(){
 
         if($_SESSION['loged']){
-            $data['style'] = [''];
-            $data['script'] = ['login'];
-            $this->render('/home/index', $data);
-            exit;
+            $this->index();
         }
 
         $data['style'] = [''];
         $data['script'] = ['login'];
         $this->render('/home/login', $data);
+        exit;
     }
     
 }

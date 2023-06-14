@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Lib\Sessao;
+use App\Lib\Debug as Debug;
 
 abstract class Controller
 {
@@ -35,7 +36,11 @@ abstract class Controller
 
 
         require_once PATH . '/App/Views/layouts/header.php';
-        require_once PATH . '/App/Views/layouts/navbar.php';
+        if($_SESSION['nivel'] == 1){
+            require_once PATH . '/App/Views/layouts/admnavbar.php';
+        } else {
+            require_once PATH . '/App/Views/layouts/navbar.php';
+        }
         require_once PATH . '/App/Views/' . $view . '.php';
         require_once PATH . '/App/Views/layouts/footer.php';
         exit;

@@ -23,7 +23,7 @@ class Sessao
     function destruirSessao() {
         session_start();
         session_destroy();
-        $_SESSION['loged'] = false; 
+        $_SESSION['loged'] = false;
     }    
 
 }

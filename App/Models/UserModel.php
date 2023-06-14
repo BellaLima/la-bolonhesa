@@ -20,4 +20,18 @@ Class UserModel extends Model
 
     }
 
+    public function getAllUsers(){
+        try{
+            $users = $this->select('users', '*', "WHERE ativo = 1");
+            if($users){
+                return $users;
+            } else {
+                return false;
+            }
+        } catch(\Exception $e){
+            echo $e->getMessage();
+            exit;
+        }
+    }
+
 }
