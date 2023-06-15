@@ -15,6 +15,16 @@ abstract class Controller
         $this->setViewParam('nameController',$app->getControllerName());
     }
 
+    public function verify(){
+        if($_SESSION['loged']){
+            if($_SESSION['nivel'] != 1){
+                $data['style'] = [''];
+                $data['script'] = [''];
+                $this->render('/', $data);
+            }
+        }
+    }
+
     public function render($view, $data = [])
     {
         $viewVar = $this->getViewVar();

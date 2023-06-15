@@ -40,7 +40,7 @@
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['cpf']; ?></td>
                         <td class="px-3 py-3">
                             <div class="flex justify-end gap-4">
-                                <a x-data="{ tooltip: 'Delete' }" href="#">
+                                <a x-data="{ tooltip: 'Delete' }" href="<?php echo 'http://'.APP_HOST.'/admin/deleteuser/'.$usuario['id']; ?>">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"

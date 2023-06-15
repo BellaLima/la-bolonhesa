@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Lib\Debug as Debug;
 
 Class UserModel extends Model
 {
@@ -28,6 +29,23 @@ Class UserModel extends Model
             } else {
                 return false;
             }
+        } catch(\Exception $e){
+            echo $e->getMessage();
+            exit;
+        }
+    }
+
+    public function deletuser($id){
+        try{
+            $cols = [
+                ':ativo' => 0,
+            ];
+            
+            $where = "WHERE id = '$id[0]'";
+            
+            $this->update('users', $cols, $where);
+            
+            return true;
         } catch(\Exception $e){
             echo $e->getMessage();
             exit;
