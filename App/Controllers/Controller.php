@@ -56,6 +56,38 @@ abstract class Controller
         exit;
     }
 
+    public function renderadm($view, $data = [])
+    {
+        $this->verify();
+        $viewVar = $this->getViewVar();
+        $Sessao  = Sessao::class;
+        extract($data);
+
+        if(empty($_SESSION['loged'])){
+            $data['style'] = [''];
+            $data['script'] = ['login'];
+            
+            extract($data);
+
+            require_once PATH . '/App/Views/layouts/header.php';
+            require_once PATH . '/App/Views/layouts/navbar.php';
+            require_once PATH . '/App/Views/home/login.php';
+            require_once PATH . '/App/Views/layouts/footer.php';
+            exit;
+        }
+
+
+        require_once PATH . '/App/Views/layouts/header.php';
+        if($_SESSION['nivel'] == 1){
+            require_once PATH . '/App/Views/layouts/admnavbar.php';
+        } else {
+            require_once PATH . '/App/Views/layouts/navbar.php';
+        }
+        require_once PATH . '/App/Views/' . $view . '.php';
+        require_once PATH . '/App/Views/layouts/footer.php';
+        exit;
+    }
+
     public function redirect($view)
     {
         header('Location: http://' . APP_HOST . $view);

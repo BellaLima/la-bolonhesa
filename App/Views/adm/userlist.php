@@ -1,4 +1,6 @@
 <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+    <button class="block uppercase mx-auto mt-5 shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded"><a href="<?php echo 'http://'.APP_HOST.'/admin/usercreate/' ?>">Cadastrar Usuario</a></button>
+
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
         <thead class="bg-gray-50">
             <tr>
@@ -57,7 +59,7 @@
                                     />
                                 </svg>
                                 </a>
-                                <a x-data="{ tooltip: 'Edite' }" href="#">
+                                <a x-data="{ tooltip: 'Edite' }" href="<?php echo 'http://'.APP_HOST.'/admin/editeuser/'.$usuario['id']; ?>">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
