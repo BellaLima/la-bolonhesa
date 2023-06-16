@@ -78,7 +78,7 @@ Class CategoriaController extends Controller
             $extensao = strtolower($extensao);
             if(strstr('.jpg;.jpeg;.gif;.png;.webp', $extensao)){
                 $novoNome = uniqid(time()) . '.' . $extensao;
-                $destino = 'public/uploads/' . $novoNome;
+                $destino = 'public/images/uploads/' . $novoNome;
                 if(move_uploaded_file($arquivo_tmp, $destino)){
                     $dados['image'] = $novoNome;
                     $movie = new CategoriaModel();
