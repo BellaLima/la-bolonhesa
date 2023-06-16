@@ -38,8 +38,8 @@
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['nome']; ?></td>
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['email']; ?></td>
                         <td class="px-3 py-3 font-bold uppercase"><?php if($usuario['nivel'] == 1){ echo 'ADMIN';} else { echo 'CLIENTE'; } ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['telefone']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['cpf']; ?></td>
+                        <td class="px-3 py-3 font-bold uppercase telefone"><?php echo $usuario['telefone']; ?></td>
+                        <td class="px-3 py-3 font-bold uppercase cpf"><?php echo $usuario['cpf']; ?></td>
                         <td class="px-3 py-3">
                             <div class="flex justify-end gap-4">
                                 <a x-data="{ tooltip: 'Delete' }" href="<?php echo 'http://'.APP_HOST.'/user/deleteuser/'.$usuario['id']; ?>">

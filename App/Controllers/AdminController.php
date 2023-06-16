@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel as UserModel;
 use App\Lib\Debug as Debug;
+use App\Models\CategoriaModel;
 use App\Models\TamanhoModel;
 
 Class AdminController extends Controller
@@ -12,7 +13,7 @@ Class AdminController extends Controller
         $usuarios = (new UserModel())->getAllUsers();
         
         $data['style'] = [''];
-        $data['script'] = [''];
+        $data['script'] = ['user'];
         $data['usuarios'] = $usuarios;
         $this->renderadm('/adm/user/userlist', $data);
         exit;
@@ -65,6 +66,36 @@ Class AdminController extends Controller
         $data['script'] = ['tamanho'];
         $data['tamanho'] = $tamanho;
         $this->renderadm('/adm/tamanho/tamanhoedit', $data);
+        exit;
+    }
+
+    public function categorialist(){
+        $categorias = (new CategoriaModel())->getAllCategoria();
+        
+        $data['style'] = [''];
+        $data['script'] = [''];
+        $data['categorias'] = $categorias;
+        $this->renderadm('/adm/categoria/categorialist', $data);
+        exit;
+    }
+
+    public function categoriacreate($id){
+        $data['style'] = [''];
+        $data['script'] = ['categoria'];
+
+        $this->renderadm('/adm/categoria/categoriacreate', $data);
+        exit;
+    }
+
+    public function categoriaedit($id){
+        $this->verify();
+        
+        $categoria = (new CategoriaModel())->getCategoria($id[0]);
+        
+        $data['style'] = [''];
+        $data['script'] = ['categoria'];
+        $data['categoria'] = $categoria;
+        $this->renderadm('/adm/categoria/categoriaedit', $data);
         exit;
     }
 }
