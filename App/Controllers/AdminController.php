@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel as UserModel;
 use App\Lib\Debug as Debug;
 use App\Models\CategoriaModel;
+use App\Models\PizzaModel;
 use App\Models\TamanhoModel;
 
 Class AdminController extends Controller
@@ -96,6 +97,16 @@ Class AdminController extends Controller
         $data['script'] = ['categoria'];
         $data['categoria'] = $categoria;
         $this->renderadm('/adm/categoria/categoriaedit', $data);
+        exit;
+    }
+
+    public function pizzalist(){
+        $pizzas = (new PizzaModel())->getAllPizza();
+        
+        $data['style'] = [''];
+        $data['script'] = [''];
+        $data['pizzas'] = $pizzas;
+        $this->renderadm('/adm/pizza/pizzalist', $data);
         exit;
     }
 }
