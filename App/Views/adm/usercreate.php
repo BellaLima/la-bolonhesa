@@ -26,7 +26,12 @@
 
             <div class="mb-3">
                 <label for="cpf" class="block mt-2 text-xs font-semibold text-gray-700 uppercase">CPF:</label>
-                <input id="cpf" type="number" name="cpf" placeholder="58964215875" autocomplete="cpf" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                <input id="cpf" type="text" name="cpf" placeholder="589.642.158-75" autocomplete="cpf" class="cpf block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="telefone" class="block mt-2 text-xs font-semibold text-gray-700 uppercase">TELEFONE:</label>
+                <input id="telefone" type="text" name="telefone" placeholder="(18) 99675-1896" autocomplete="cpf" class="telefone block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
             </div>
 
             <div class="mb-3">
