@@ -14,6 +14,26 @@
             </div>
 
             <div class="mb-3">
+                <label for="categoria" class="block mt-2 text-xs font-semibold text-gray-700 uppercase">Categoria:</label>
+                <select id="categoria" name="categoria" class="bg-gray-50 mt-2 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Selecione Uma Categoria</option>
+                    <?php foreach($categorias as $categoria) { ?>
+                    <option value="<?php echo $categoria['id']; ?>" ><?php echo $categoria['nome']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tamanho" class="block mt-2 text-xs font-semibold text-gray-700 uppercase">Tamanho:</label>
+                <select id="tamanho" name="tamanho" class="bg-gray-50 mt-2 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Selecione um Tamanho</option>
+                    <?php foreach($tamanhos as $tamanho) { ?>
+                    <option value="<?php echo $tamanho['id']; ?>" ><?php echo $tamanho['nome']; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="descricao" class="block text-xs font-semibold text-gray-700 uppercase">Descricao</label>
                 <textarea cols="40" rows="5" id="descricao" type="text" name="descricao" placeholder="descrição" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required ></textarea>
             </div>
