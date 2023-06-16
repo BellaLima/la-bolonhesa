@@ -20,7 +20,7 @@ Class PizzaModel extends Model
     }
 
     public function insertPizza($dados){
-        $cols = ":nome, :imagem, :descricao, :preco_base, :categoria_id, :tamanho_id, :ativo";
+        $cols = ":nome, :imagem, :descricao, :preco_base, :categoria_id, :ativo";
         
         $values = [
             ':nome' => $dados['nome'],

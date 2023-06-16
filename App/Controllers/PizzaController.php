@@ -3,15 +3,26 @@
 namespace App\Controllers;
 
 use App\Lib\Debug;
+use App\Models\CategoriaModel;
 use App\Models\PizzaModel;
+use App\Models\TamanhoModel;
 
 Class PizzaController extends Controller
 {
     public function index()
     {
 
+        $pizzas = (new PizzaModel())->getAllPizza();
+        
         $data['style'] = [''];
         $data['script'] = [''];
+        $data['pizzas'] = $pizzas;
+
+        $categorias = (new CategoriaModel())->getAllCategoria();
+        $tamanhos = (new TamanhoModel())->getAllTamanhos();
+
+        $data['categorias'] = $categorias;
+        $data['tamanhos'] = $tamanhos;
         $this->render('/pizza/index', $data);
     }
 

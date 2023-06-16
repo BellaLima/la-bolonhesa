@@ -122,11 +122,8 @@ Class AdminController extends Controller
         $data['script'] = ['pizza'];
 
         $categorias = (new CategoriaModel())->getAllCategoria();
-        $tamanhos = (new TamanhoModel())->getAllTamanhos();
 
         $data['categorias'] = $categorias;
-        $data['tamanhos'] = $tamanhos;
-        
         $this->renderadm('/adm/pizza/pizzacreate', $data);
         exit;
     }
