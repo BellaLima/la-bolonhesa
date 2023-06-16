@@ -1,20 +1,16 @@
 <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
-    <button class="block uppercase mx-auto mt-5 shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded"><a href="<?php echo 'http://'.APP_HOST.'/admin/usercreate/' ?>">Cadastrar Usuario</a></button>
+    <button class="block uppercase mx-auto mt-5 shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded"><a href="<?php echo 'http://'.APP_HOST.'/admin/tamanhocreate/' ?>">Cadastrar Tamanho</a></button>
 
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
         <thead class="bg-gray-50">
             <tr>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">NOME</th>
-                <th scope="col" class="px-6 py-4 font-medium text-gray-900">EMAIL</th>
-                <th scope="col" class="px-6 py-4 font-medium text-gray-900">NIVEL</th>
-                <th scope="col" class="px-6 py-4 font-medium text-gray-900">TELEFONE</th>
-                <th scope="col" class="px-6 py-4 font-medium text-gray-900">CPF</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">MULTIPLICADOR</th>
                 <th scope="col" class="px-6 py-4 font-medium flex justify-end text-gray-900">AÇÕES</th>
             </tr>
         </thead>
         <?php 
-        use App\Lib\Debug as Debug;
-            if(empty($usuarios)){
+            if(empty($tamanhos)){
         ?>
             <tbody>
                 <tr class="border-b even:dark:bg-gray-700">
@@ -30,19 +26,16 @@
         ?>
             <tbody class="divide-y divide-gray-100 border-t border-gray-100">
             <?php 
-                // (new Debug())->dd($usuarios);
+                // (new Debug())->dd($tamanhos);
             
-                foreach($usuarios as $usuario){
+                foreach($tamanhos as $tamanho){
             ?>
                     <tr class="border-b border-black-light text-black hover:bg-gray-dark">
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['nome']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['email']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php if($usuario['nivel'] == 1){ echo 'ADMIN';} else { echo 'CLIENTE'; } ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['telefone']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $usuario['cpf']; ?></td>
+                        <td class="px-3 py-3 font-bold uppercase"><?php echo $tamanho['nome']; ?></td>
+                        <td class="px-3 py-3 font-bold uppercase"><?php echo $tamanho['multiplicador']/100; ?></td>
                         <td class="px-3 py-3">
                             <div class="flex justify-end gap-4">
-                                <a x-data="{ tooltip: 'Delete' }" href="<?php echo 'http://'.APP_HOST.'/admin/deleteuser/'.$usuario['id']; ?>">
+                                <a x-data="{ tooltip: 'Delete' }" href="<?php echo 'http://'.APP_HOST.'/tamanho/tamanhodelete/'.$tamanho['id']; ?>">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -59,7 +52,7 @@
                                     />
                                 </svg>
                                 </a>
-                                <a x-data="{ tooltip: 'Edite' }" href="<?php echo 'http://'.APP_HOST.'/admin/editeuser/'.$usuario['id']; ?>">
+                                <a x-data="{ tooltip: 'Edite' }" href="<?php echo 'http://'.APP_HOST.'/admin/tamanhoedit/'.$tamanho['id']; ?>">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"

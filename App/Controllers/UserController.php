@@ -46,4 +46,83 @@ Class UserController extends Controller
         $this->render('/home', $data);
     }
 
+    public function userstore(){ 
+        $this->verify();
+
+        $cols = [
+            'nivel' => trim($_POST['type-user']),
+            'nome' => strtoupper(preg_replace('/[^a-zA-Z0-9\s]/', '',trim($_POST['nome']))),
+            'email' => trim($_POST['email']),
+            'cpf' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['cpf']))),
+            'telefone' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['telefone']))),
+            'senha' => md5(trim($_POST['senha'])),
+        ];
+
+        $insert = (new UserModel())->insertUser($cols);
+        
+        if($insert){
+            $data = [
+                'stattus' => 'success',
+                'message' => 'Usuário cadastrado com sucesso',
+                'host' => APP_HOST
+            ];
+            echo json_encode($data);
+            exit;
+        }else{
+            $data = [
+                'stattus' => 'error',
+                'message' => 'Erro ao cadastrar usuário',
+            ];
+            echo json_encode($data);
+            exit;
+        }
+        exit;
+    }
+
+    public function userupdate(){
+        $this->verify();
+
+        $id = preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['id'])));
+
+        $cols = [
+            ':nivel' => trim($_POST['type-user']),
+            ':nome' => strtoupper(preg_replace('/[^a-zA-Z0-9\s]/', '',trim($_POST['nome']))),
+            ':email' => trim($_POST['email']),
+            ':cpf' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['cpf']))),
+            ':telefone' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['telefone']))),
+            ':senha' => md5(trim($_POST['senha'])),
+        ];
+
+        $update = (new UserModel())->updateUser($cols, $id);
+
+        if($update){
+            $data = [
+                'stattus' => 'success',
+                'message' => 'Usuário atualizado com sucesso',
+                'host' => APP_HOST
+            ];
+            echo json_encode($data);
+            exit;
+        }else{
+            $data = [
+                'stattus' => 'error',
+                'message' => 'Erro ao atualizar usuário',
+            ];
+            echo json_encode($data);
+            exit;
+        }
+        exit;
+    }
+    
+    public function deleteuser($id){
+        $this->verify();
+
+        $deletuser = (new UserModel())->deletuser($id);
+        
+        if($deletuser){
+           $this->redirect('/admin/userlist');
+        };
+        exit;
+    }
+
 }

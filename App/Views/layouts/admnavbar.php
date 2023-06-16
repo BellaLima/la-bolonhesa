@@ -3,11 +3,11 @@
     <a href="/home" class="text-2xl no-underline hover:text-blue-dark">Administrativo</a>
   </div>
   <div class="flex font-semibold font-heading space-x-12">
-    <a href="/one" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Pedidos</a>
-    <a href="/two" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Pizzas</a>
+    <a href="<?php echo 'http://'.APP_HOST.'/admin/pedidolist'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Pedidos</a>
+    <a href="<?php echo 'http://'.APP_HOST.'/admin/pizzalist'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Pizzas</a>
     <a href="<?php echo 'http://'.APP_HOST.'/admin/userlist'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Usuarios</a>
-    <a href="/three" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Categorias</a>
-    <a href="/three" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Tamanhos</a>
+    <a href="<?php echo 'http://'.APP_HOST.'/admin/categorialist'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Categorias</a>
+    <a href="<?php echo 'http://'.APP_HOST.'/admin/tamanholist'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">Tamanhos</a>
     <a href="<?php echo 'http://'.APP_HOST.'/user/logout'; ?>" class="text-lg hover:text-gray-200 no-underline hover:text-blue-dark ml-2">
       <div class="flex space-x-2">
         <p>LOGOUT</p> 

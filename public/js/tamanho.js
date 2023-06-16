@@ -1,9 +1,8 @@
 jQuery(function() {
     
-    $('.telefone').mask('(00) 00000-0000');
-    $('.cpf').mask('000.000.000-00');
+    $('.multiplicador').mask('0.000000');
 
-    $('#form-usercreate').on("submit", function (e) { 
+    $('#form-tamanhocreate').on("submit", function (e) { 
         e.preventDefault();
         
         let url = $(this).attr('action'); 
@@ -17,14 +16,14 @@ jQuery(function() {
             success: function(data) {
                 let dados = data;
                 if(dados.stattus == 'success') {
-                    $('#form-usercreate').trigger("reset");
-                    window.location.href = "http://"+dados.host+"/admin/userlist";
+                    $('#form-tamanhocreate').trigger("reset");
+                    window.location.href = "http://"+dados.host+"/admin/tamanholist";
                 }
             },
         })
     });
 
-    $('#form-useredit').on("submit", function (e) { 
+    $('#form-tamanhoedit').on("submit", function (e) { 
         e.preventDefault();
         
         let url = $(this).attr('action'); 
@@ -38,8 +37,8 @@ jQuery(function() {
             success: function(data) {
                 let dados = data;
                 if(dados.stattus == 'success') {
-                    $('#form-usercreate').trigger("reset");
-                    window.location.href = "http://"+dados.host+"/admin/userlist";
+                    $('#form-tamanhocreate').trigger("reset");
+                    window.location.href = "http://"+dados.host+"/admin/tamanholist";
                 }
             },
         })

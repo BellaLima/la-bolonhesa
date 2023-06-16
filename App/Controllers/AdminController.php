@@ -4,18 +4,17 @@ namespace App\Controllers;
 
 use App\Models\UserModel as UserModel;
 use App\Lib\Debug as Debug;
-
+use App\Models\TamanhoModel;
 
 Class AdminController extends Controller
 { 
     public function userlist(){
-
         $usuarios = (new UserModel())->getAllUsers();
         
         $data['style'] = [''];
         $data['script'] = [''];
         $data['usuarios'] = $usuarios;
-        $this->renderadm('/adm/userlist', $data);
+        $this->renderadm('/adm/user/userlist', $data);
         exit;
     }
 
@@ -23,51 +22,49 @@ Class AdminController extends Controller
         $data['style'] = [''];
         $data['script'] = ['user'];
 
-        $this->renderadm('/adm/usercreate', $data);
+        $this->renderadm('/adm/user/usercreate', $data);
         exit;
     }
 
-    public function userstore(){ 
+    public function editeuser($id){
         $this->verify();
-
-        $cols = [
-            'nivel' => trim($_POST['type-user']),
-            'nome' => preg_replace('/[^a-zA-Z0-9\s]/', '',trim($_POST['nome'])),
-            'email' => trim($_POST['email']),
-            'cpf' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['cpf']))),
-            'telefone' => preg_replace('/\s+/', '', preg_replace('/[^a-zA-Z0-9\s]/', '', trim($_POST['telefone']))),
-            'senha' => md5(trim($_POST['senha'])),
-        ];
-
-        $insert = (new UserModel())->insertUser($cols);
         
-        if($insert){
-            $data = [
-                'stattus' => 'success',
-                'message' => 'Usuário cadastrado com sucesso',
-                'host' => APP_HOST.'/admin/userlist'
-            ];
-            echo json_encode($data);
-            exit;
-        }else{
-            $data = [
-                'stattus' => 'error',
-                'message' => 'Erro ao cadastrar usuário',
-            ];
-            echo json_encode($data);
-            exit;
-        }
+        $usuario = (new UserModel())->getUser($id[0]);
+        
+        $data['style'] = [''];
+        $data['script'] = ['user'];
+        $data['usuario'] = $usuario;
+        $this->renderadm('/adm/user/useredit', $data);
         exit;
     }
-    
-    public function deleteuser($id){
-        $this->verify();
 
-        $deletuser = (new UserModel())->deletuser($id);
+    public function tamanholist(){
+        $tamanhos = (new TamanhoModel())->getAllTamanhos();
         
-        if($deletuser){
-           $this->userlist();
-        };
+        $data['style'] = [''];
+        $data['script'] = [''];
+        $data['tamanhos'] = $tamanhos;
+        $this->renderadm('/adm/tamanho/tamanholist', $data);
+        exit;
+    }
+
+    public function tamanhocreate($id){
+        $data['style'] = [''];
+        $data['script'] = ['tamanho'];
+
+        $this->renderadm('/adm/tamanho/tamanhocreate', $data);
+        exit;
+    }
+
+    public function tamanhoedit($id){
+        $this->verify();
+        
+        $tamanho = (new TamanhoModel())->getTamanho($id[0]);
+        
+        $data['style'] = [''];
+        $data['script'] = ['tamanho'];
+        $data['tamanho'] = $tamanho;
+        $this->renderadm('/adm/tamanho/tamanhoedit', $data);
         exit;
     }
 }

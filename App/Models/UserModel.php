@@ -70,22 +70,30 @@ Class UserModel extends Model
         }
     }
 
-    public function savemovie($dados){
-        $cols = ":title, :year, :category_id, :trailer, :sinopse, :image, :active";
-        $values = [
-            ':title' => $dados['title'],
-            ':year' => $dados['year'],
-            ':category_id' => $dados['category_id'],
-            ':trailer' => $dados['trailer'],
-            ':sinopse' => $dados['sinopse'],
-            ':image' => $dados['image'],
-            ':active' => 1
-        ];
+    public function getUser($id){
+        try{
+            $user = $this->select('users', '*', "WHERE ativo = 1 AND id = ".$id);
+            if($user[0]){
+                return $user[0];
+            } else {
+                return false;
+            }
+        } catch(\Exception $e){
+            echo $e->getMessage();
+            exit;
+        }
+    }
 
-        if($this->insert('movies', $cols, $values)){
+    public function updateUser($cols, $id){
+        try{
+            
+            $where = "WHERE id = '$id'";
+            $this->update('users', $cols, $where);
+            
             return true;
-        }else {
-            return false;
+        } catch(\Exception $e){
+            echo $e->getMessage();
+            exit;
         }
     }
 
