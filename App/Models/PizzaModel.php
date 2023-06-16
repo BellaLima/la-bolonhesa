@@ -19,16 +19,20 @@ Class PizzaModel extends Model
         }
     }
 
-    public function insertCategoria($dados){
-        $cols = ":nome, :imagem, :ativo";
+    public function insertPizza($dados){
+        $cols = ":nome, :imagem, :descricao, :preco_base, :categoria_id, :tamanho_id, :ativo";
         
         $values = [
             ':nome' => $dados['nome'],
-            ':imagem' => $dados['image'],
+            ':imagem' => $dados['imagem'],
+            ':descricao' => $dados['descricao'],
+            ':preco_base' => $dados['preco_base'],
+            ':categoria_id' => $dados['categoria_id'],
+            ':tamanho_id' => $dados['tamanho_id'],
             ':ativo' => 1
         ];
 
-        if($this->insert('categoria', $cols, $values)){
+        if($this->insert('pizza', $cols, $values)){
             return true;
         }else {
             return false;
