@@ -28,7 +28,6 @@ Class PizzaModel extends Model
             ':descricao' => $dados['descricao'],
             ':preco_base' => $dados['preco_base'],
             ':categoria_id' => $dados['categoria_id'],
-            ':tamanho_id' => $dados['tamanho_id'],
             ':ativo' => 1
         ];
 
@@ -60,7 +59,7 @@ Class PizzaModel extends Model
         }
     }
 
-    public function categoriaDelete($id){
+    public function pizzaDelete($id){
         try{
             $cols = [
                 ':ativo' => 0,
@@ -68,7 +67,7 @@ Class PizzaModel extends Model
             
             $where = "WHERE id = '$id[0]'";
             
-            $this->update('categoria', $cols, $where);
+            $this->update('pizza', $cols, $where);
             
             return true;
         } catch(\Exception $e){

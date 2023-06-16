@@ -30,7 +30,6 @@ Class PizzaController extends Controller
                 'descricao' => strtoupper(preg_replace('/[^,a-zA-Z0-9\s]/', '',trim($_POST['descricao']))),
                 'preco_base' => intval(preg_replace('/\s+/', '', preg_replace('/[^0-9\s]/', '', trim($_POST['preco_base'])))),
                 'categoria_id' => intval(preg_replace('/[^a-zA-Z0-9\s]/', '',trim($_POST['categoria']))),
-                'tamanho_id' => intval(preg_replace('/[^a-zA-Z0-9\s]/', '',trim($_POST['tamanho']))),
             ];
 
             $imagem = $_FILES['imagem'];
@@ -84,7 +83,17 @@ Class PizzaController extends Controller
             echo json_encode($data);
             exit;
         }
-        (new Debug)->dd($cols);
+    }
+
+    public function pizzadelete($id){
+        $this->verify();
+
+        $delet = (new PizzaModel())->pizzaDelete($id);
+        
+        if($delet){
+           $this->redirect('/admin/pizzalist');
+        };
+        exit;
     }
 
 }

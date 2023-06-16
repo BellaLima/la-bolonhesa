@@ -106,6 +106,13 @@ Class AdminController extends Controller
         $data['style'] = [''];
         $data['script'] = [''];
         $data['pizzas'] = $pizzas;
+
+        $categorias = (new CategoriaModel())->getAllCategoria();
+        $tamanhos = (new TamanhoModel())->getAllTamanhos();
+
+        $data['categorias'] = $categorias;
+        $data['tamanhos'] = $tamanhos;
+        
         $this->renderadm('/adm/pizza/pizzalist', $data);
         exit;
     }

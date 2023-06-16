@@ -9,7 +9,6 @@
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">DESCRIÇÃO</th>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">PRECO BASE</th>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">CATEGORIA</th>
-                <th scope="col" class="px-6 py-4 font-medium text-gray-900">TAMANHO</th>
                 <th scope="col" class="px-6 py-4 font-medium flex justify-end text-gray-900">AÇÕES</th>
             </tr>
         </thead>
@@ -47,8 +46,13 @@
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $pizza['nome']; ?></td>
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $pizza['descricao']; ?></td>
                         <td class="px-3 py-3 font-bold uppercase"><?php echo $pizza['preco_base']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $pizza['categoria_id']; ?></td>
-                        <td class="px-3 py-3 font-bold uppercase"><?php echo $pizza['tamanho_id']; ?></td>
+                        <td class="px-3 py-3 font-bold uppercase"><?php 
+                            foreach($categorias as $categoria){
+                                if($categoria['id'] == $pizza['categoria_id']){
+                                    echo $categoria['nome'];
+                                }
+                            }
+                        ?></td>
                         <td class="px-3 py-3">
                             <div class="flex justify-end gap-4">
                                 <a x-data="{ tooltip: 'Delete' }" href="<?php echo 'http://'.APP_HOST.'/pizza/pizzadelete/'.$pizza['id']; ?>">
