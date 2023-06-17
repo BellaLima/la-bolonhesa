@@ -10,6 +10,15 @@ use App\Models\TamanhoModel;
 
 Class AdminController extends Controller
 { 
+    public function index(){
+        $pizzas = (new PizzaModel())->getAllPizza();
+        
+        $data['style'] = [''];
+        $data['script'] = [''];
+
+        $this->renderadm('/home/index', $data);
+        exit;
+    }
     public function userlist(){
         $usuarios = (new UserModel())->getAllUsers();
         
@@ -116,6 +125,17 @@ Class AdminController extends Controller
         $this->renderadm('/adm/pizza/pizzalist', $data);
         exit;
     }
+
+    public function pedidolist(){
+        $pizzas = (new PizzaModel())->getAllPizza();
+        
+        $data['style'] = [''];
+        $data['script'] = [''];
+
+        $this->renderadm('/adm/pedido/pedidolist', $data);
+        exit;
+    }
+
 
     public function pizzacreate($id){
         $data['style'] = [''];

@@ -20,7 +20,7 @@ Class UserController extends Controller
                     $verificaSessao = (new Sessao())->criarSessaoUsuario($User[0]);
                     if($verificaSessao){
                         if($_SESSION['nivel'] == 1){
-                            echo json_encode(array('status' => 'success', 'message' => 'Usuário logado com sucesso', 'redirect' => 'http://'.APP_HOST));
+                            echo json_encode(array('status' => 'success', 'message' => 'Usuário logado com sucesso', 'redirect' => 'http://'.APP_HOST.'/admin/index'));
                             exit;
                         } else {
                             echo json_encode(array('status' => 'success', 'message' => 'Usuário logado com sucesso', 'redirect' => 'http://'.APP_HOST));
